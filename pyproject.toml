@@ -1,0 +1,24 @@
+[project]
+name = "hybrid"
+version = "0.1.0"
+description = "Hello world, this is my cool project."
+readme = "README.md"
+authors = [
+    { name = "IAmSorryDave", email = "212933284+IAmSorryDave@users.noreply.github.com" }
+]
+requires-python = ">=3.12"
+dependencies = []
+license = "MIT"
+
+[project.scripts]
+hybrid = "hybrid:main"
+
+[build-system]
+requires = ["uv_build>=0.10.12,<0.11.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.0.2",
+    "ruff>=0.15.7",
+]
