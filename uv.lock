@@ -13,13 +13,14 @@ wheels = [
 
 [[package]]
 name = "hybrid"
-version = "0.1.0"
+version = "0.2.0"
 source = { editable = "." }
 
 [package.dev-dependencies]
 dev = [
     { name = "pytest" },
     { name = "ruff" },
+    { name = "uv-bump" },
 ]
 
 [package.metadata]
@@ -28,6 +29,7 @@ dev = [
 dev = [
     { name = "pytest", specifier = ">=9.0.2" },
     { name = "ruff", specifier = ">=0.15.7" },
+    { name = "uv-bump", specifier = ">=0.5.0" },
 ]
 
 [[package]]
@@ -105,4 +107,13 @@ wheels = [
     { url = "https://files.pythonhosted.org/packages/26/6b/8786ba5736562220d588a2f6653e6c17e90c59ced34a2d7b512ef8956103/ruff-0.15.7-py3-none-win32.whl", hash = "sha256:6d39e2d3505b082323352f733599f28169d12e891f7dd407f2d4f54b4c2886de", size = 10582538, upload-time = "2026-03-19T16:26:15.992Z" },
     { url = "https://files.pythonhosted.org/packages/2b/e9/346d4d3fffc6871125e877dae8d9a1966b254fbd92a50f8561078b88b099/ruff-0.15.7-py3-none-win_amd64.whl", hash = "sha256:4d53d712ddebcd7dace1bc395367aec12c057aacfe9adbb6d832302575f4d3a1", size = 11755839, upload-time = "2026-03-19T16:26:19.897Z" },
     { url = "https://files.pythonhosted.org/packages/8f/e8/726643a3ea68c727da31570bde48c7a10f1aa60eddd628d94078fec586ff/ruff-0.15.7-py3-none-win_arm64.whl", hash = "sha256:18e8d73f1c3fdf27931497972250340f92e8c861722161a9caeb89a58ead6ed2", size = 11023304, upload-time = "2026-03-19T16:26:51.669Z" },
+]
+
+[[package]]
+name = "uv-bump"
+version = "0.5.0"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/f9/01/a5c821bf76fb583da1de891048d42a5fad26a3524d9c20923fbf8a1bb2f5/uv_bump-0.5.0.tar.gz", hash = "sha256:41dca1c84ef061d6c30eb049e8117ee2129869c3ad9825afc34e172731d82100", size = 6414, upload-time = "2026-03-25T18:43:41.247Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/12/ab/261c8ac0b7b62a0c054d11c702c0a1cc341e611d2ea50fa8e7063989e6d4/uv_bump-0.5.0-py3-none-any.whl", hash = "sha256:64c1309ef5788d27c58e0d2a4811610fcc2f5eb3f1788a303f40e4beef8d22b7", size = 7733, upload-time = "2026-03-25T18:43:40.251Z" },
 ]
