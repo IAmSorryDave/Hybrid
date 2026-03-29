@@ -89,7 +89,33 @@ class MyClass:
     my_static_method = staticmethod(standalone_call)  # Static method
 ```
 
-### 📍 Inheritance Support
+### � Computed Properties
+Because `@hybrid` preserves descriptor behavior, you can also use it with `property()` to expose computed, bound values.
+
+```python
+from hybrid import hybrid
+
+@hybrid
+def compute(*args, factor=2, name='default', **kwargs):
+    return locals()
+
+class Example:
+    factor = 5
+    name = 'example'
+    computed = property(compute)
+
+instance = Example()
+result = instance.computed
+# -> {'args': (), 'factor': 5, 'name': 'example', 'kwargs': {}}
+
+class SubExample(Example):
+    name = 'subexample'
+
+sub_result = SubExample().computed
+# -> {'args': (), 'factor': 5, 'name': 'subexample', 'kwargs': {}}
+```
+
+### �📍 Inheritance Support
 Subclass attributes automatically override parent values:
 
 ```python
@@ -134,7 +160,7 @@ Comprehensive test suite covering:
 - ✅ Inheritance and subclasses
 - ✅ Dataclass variations (required/optional fields, post_init, inheritance)
 - ✅ Slotted dataclasses
-- ✅ 40+ test cases
+- ✅ 25+ test cases
 
 ## Why Use It?
 
