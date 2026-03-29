@@ -1,7 +1,7 @@
 [project]
 name = "hybrid"
 version = "0.3.0"
-description = "Hello world, this is my cool project."
+description = "A Python decorator that enables **polymorphic function behavior** — write a function once, use it everywhere. ✨"
 readme = "README.md"
 authors = [
     { name = "IAmSorryDave", email = "212933284+IAmSorryDave@users.noreply.github.com" }
@@ -23,3 +23,7 @@ dev = [
     "ruff>=0.15.7",
     "uv-bump>=0.5.0",
 ]
+
+[tool.ruff]
+exclude = ["src/**/__init__.py"]
+include = ["pyproject.toml", "src/**/*.py", "tests/*.py"]

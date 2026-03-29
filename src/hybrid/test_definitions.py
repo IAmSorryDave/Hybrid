@@ -1,16 +1,16 @@
 from hybrid import hybrid
-from dataclasses import dataclass, field
-from typing import List, Dict
+from dataclasses import dataclass
+
 
 @hybrid
-def my_function(*args, c=2, d='baz', z=False , **kwargs):
-    return locals().copy()       
+def my_function(*args, c=2, d="baz", z=False, **kwargs):
+    return locals().copy()
+
 
 class MyClass:
-
     z = True
 
-    def my_bare_method(*args, c=2, d='baz', z=False , **kwargs):
+    def my_bare_method(*args, c=2, d="baz", z=False, **kwargs):
         return my_function(*args, c=c, d=d, z=z, **kwargs)
 
     my_class_method = classmethod(my_function)
@@ -21,18 +21,17 @@ class MyClass:
 
     my_property = property(my_function)
 
-class MySubClass(MyClass):
 
-    d = 'qux'
+class MySubClass(MyClass):
+    d = "qux"
+
 
 @dataclass
 class MyDataClass:
     c: int = 3
-    d: str = 'baz'
+    d: str = "baz"
     z: bool = True
 
     my_method = my_function
 
     my_property = property(my_function)
-
-
