@@ -149,7 +149,8 @@ class Config:
     connect = connect
 
 cfg = Config(host='example.com', port=443)
-result = connect('client', ...)  # Positional args work!
+cfg.connect()
+# -> {'args': (), 'host': 'example.com', 'port': 443, 'kwargs': {}}
 ```
 
 ## Testing
