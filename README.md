@@ -1,4 +1,4 @@
-# hybrid 🚀
+# hybrid 🦎
 
 A Python decorator that enables **polymorphic function behavior** — write a function once, use it everywhere. ✨
 
@@ -58,13 +58,16 @@ result = g.say('Charlie', greeting='Hey')
 When called on an instance/class, the decorator scans for attributes matching your function's parameter names and injects them as defaults:
 
 ```python
+
+@hybrid
+def execute(*args, timeout=5, retries=1, **kwargs):
+    return locals().copy()
+
 class Config:
     timeout = 30
     retries = 3
-    
-    @hybrid
-    def execute(*args, timeout=5, retries=1, **kwargs):
-        return locals().copy()
+
+    execute = execute
 
 cfg = Config()
 result = cfg.execute('task')
@@ -73,12 +76,13 @@ result = cfg.execute('task')
 
 ### 🔄 Works with All Method Types
 ```python
+
+@hybrid
+def standalone_call(*args, value=0, **kwargs):
+    return locals()
+
 class MyClass:
     value = 42
-    
-    @hybrid
-    def standalone_call(*args, value=0, **kwargs):
-        return locals()
     
     my_method = standalone_call  # Instance method
     my_class_method = classmethod(standalone_call)  # Class method
@@ -107,28 +111,19 @@ Works seamlessly with dataclasses of all flavors:
 ```python
 from dataclasses import dataclass
 
+@hybrid
+def connect(*args, host='0.0.0.0', port=3000, **kwargs):
+    return locals()
+
 @dataclass
 class Config:
     host: str = 'localhost'
     port: int = 8080
 
-@hybrid
-def connect(*args, host='0.0.0.0', port=3000, **kwargs):
-    return locals()
+    connect = connect
 
 cfg = Config(host='example.com', port=443)
 result = connect('client', ...)  # Positional args work!
-```
-
-### 🔐 Slots Support
-Efficient memory usage with `__slots__` dataclasses:
-
-```python
-from dataclasses import dataclass
-
-@dataclass(slots=True)
-class SlottedConfig:
-    debug: bool = False
 ```
 
 ## Testing
@@ -140,10 +135,6 @@ Comprehensive test suite covering:
 - ✅ Dataclass variations (required/optional fields, post_init, inheritance)
 - ✅ Slotted dataclasses
 - ✅ 40+ test cases
-
-```bash
-pytest tests/test_main.py -v
-```
 
 ## Why Use It?
 
