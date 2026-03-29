@@ -30,7 +30,7 @@ from hybrid import hybrid
 
 @hybrid
 def greet(*args, greeting='Hello', enthusiasm='!', **kwargs):
-    return locals().copy()
+    return locals()
 
 # 1. As a standalone function
 result = greet('Alice')
