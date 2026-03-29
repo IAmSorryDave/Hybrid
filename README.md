@@ -16,7 +16,11 @@ All while **automatically injecting class/instance attributes** as keyword argum
 ## Installation
 
 ```bash
-pip install -e .
+# install from PyPI
+pip install hybrid
+
+# alternatively, install the latest pre-release from TestPyPI
+pip install --index-url https://test.pypi.org/simple/ --upgrade --no-deps hybrid
 ```
 
 ## Quick Example
