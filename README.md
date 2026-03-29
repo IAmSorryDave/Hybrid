@@ -115,7 +115,7 @@ sub_result = SubExample().computed
 # -> {'args': (), 'factor': 5, 'name': 'subexample', 'kwargs': {}}
 ```
 
-### �📍 Inheritance Support
+### 📍 Inheritance Support
 Subclass attributes automatically override parent values:
 
 ```python
@@ -160,7 +160,6 @@ Comprehensive test suite covering:
 - ✅ All method types (instance, class, static, bare)
 - ✅ Inheritance and subclasses
 - ✅ Dataclass variations (required/optional fields, post_init, inheritance)
-- ✅ Slotted dataclasses
 - ✅ 25+ test cases
 
 ## Why Use It?
