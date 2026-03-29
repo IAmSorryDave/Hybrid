@@ -1,4 +1,4 @@
-# hybrid 🦎
+# Hybrid 🦎
 
 A Python decorator that enables **polymorphic function behavior** — write a function once, use it everywhere. ✨
 
