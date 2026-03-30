@@ -9,7 +9,6 @@ authors = [
 requires-python = ">=3.12"
 dependencies = []
 license = "MIT"
-package-dir = "src/hybrid"
 
 [project.scripts]
 hybrid = "hybrid:main"
