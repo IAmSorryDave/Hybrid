@@ -6,10 +6,10 @@ A Python decorator that enables **polymorphic function behavior** — write a fu
 
 The `@hybrid` decorator transforms a single function into a chameleonic entity that seamlessly works as:
 - ✅ Standalone functions
-- ✅ Instance methods (with state binding)
-- ✅ Class methods (with class attributes)
-- ✅ Static methods (pure functions)
-- ✅ Bare methods (manual control)
+- ✅ Instance methods 
+- ✅ Class methods 
+- ✅ Static methods 
+- ✅ Bare methods
 
 All while **automatically injecting class/instance attributes** as keyword arguments when parameters match.
 
@@ -70,8 +70,8 @@ class Config:
     execute = execute
 
 cfg = Config()
-result = cfg.execute('task')
-# → timeout=30, retries=3 (bound from class attributes!)
+cfg.execute('task')
+# → { timeout : 30, retries : 3}  Bound from class and instance attributes!
 ```
 
 ### 🔄 Works with All Method Types
@@ -86,7 +86,7 @@ class MyClass:
     
     my_method = standalone_call  # Instance method
     my_class_method = classmethod(standalone_call)  # Class method
-    my_static_method = staticmethod(standalone_call)  # Static method
+    my_static_method = staticmethod(standalone_call)  # Static method. Simply binds the original function.
 ```
 
 ### � Computed Properties
