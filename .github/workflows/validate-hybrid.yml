@@ -11,12 +11,15 @@ on:
 
 jobs:
   build:
-    name: continuous-integration
+    name: validation
     runs-on: ubuntu-latest
     strategy:
       matrix:
         python-version:
           - "3.12"
+          - "3.13"
+          - "3.14"
+            
 
     steps:
     
@@ -33,7 +36,7 @@ jobs:
       - name: Install dependencies
         run: uv sync --locked --all-extras
 
-      - name: Pytest
+      - name: Initial Pytest
         run: uv run pytest
 
       - name: Run Ruff Formatter
