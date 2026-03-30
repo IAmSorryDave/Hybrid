@@ -1,5 +1,13 @@
 
-name: Validate Hybrid
+name: Validate
+
+on:
+  push:
+    branches:
+      - Development
+  pull_request:
+    branches:
+      - Development
 
 jobs:
   build:
