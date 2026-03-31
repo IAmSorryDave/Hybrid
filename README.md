@@ -17,16 +17,16 @@ All while **automatically injecting class/instance attributes** as keyword argum
 
 ```bash
 # install from PyPI
-pip install hybrid
+pip install chamaeleon
 
 # alternatively, install the latest pre-release from TestPyPI
-pip install --index-url https://test.pypi.org/simple/ --upgrade --no-deps hybrid
+pip install --index-url https://test.pypi.org/simple/ --upgrade --no-deps chamaeleon
 ```
 
 ## Quick Example
 
 ```python
-from hybrid import hybrid
+from chamaeleon import hybrid
 
 @hybrid
 def greet(*args, greeting='Hello', enthusiasm='!', **kwargs):
@@ -93,7 +93,7 @@ class MyClass:
 Because `@hybrid` preserves descriptor behavior, you can also use it with `property()` to expose computed, bound values.
 
 ```python
-from hybrid import hybrid
+from chamaeleon import hybrid
 
 @hybrid
 def compute(*args, factor=2, name='default', **kwargs):
