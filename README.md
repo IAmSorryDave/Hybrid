@@ -17,16 +17,16 @@ All while **automatically injecting class/instance attributes** as keyword argum
 
 ```bash
 # install from PyPI
-pip install chamaeleon
+pip install chameleon
 
 # alternatively, install the latest pre-release from TestPyPI
-pip install --index-url https://test.pypi.org/simple/ --upgrade --no-deps chamaeleon
+pip install --index-url https://test.pypi.org/simple/ --upgrade --no-deps chameleon
 ```
 
 ## Quick Example
 
 ```python
-from chamaeleon import hybrid
+from chameleon import hybrid
 
 @hybrid
 def greet(*args, greeting='Hello', enthusiasm='!', **kwargs):
