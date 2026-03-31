@@ -1,4 +1,4 @@
-# Chameleon 🦎
+# Hybridz 🦎
 
 Introduces a `@hybrid` Python decorator that enables **polymorphic function behavior** — write a function once, use it everywhere. ✨
 
@@ -17,16 +17,16 @@ All while **automatically injecting class/instance attributes** as keyword argum
 
 ```bash
 # install from PyPI
-pip install chameleon
+pip install hybridz
 
 # alternatively, install the latest pre-release from TestPyPI
-pip install --index-url https://test.pypi.org/simple/ --upgrade --no-deps chameleon
+pip install --index-url https://test.pypi.org/simple/ --upgrade --no-deps hybridz
 ```
 
 ## Quick Example
 
 ```python
-from chameleon import hybrid
+from hybridz import hybrid
 
 @hybrid
 def greet(*args, greeting='Hello', enthusiasm='!', **kwargs):
@@ -93,7 +93,7 @@ class MyClass:
 Because `@hybrid` preserves descriptor behavior, you can also use it with `property()` to expose computed, bound values.
 
 ```python
-from chamaeleon import hybrid
+from hybridz import hybrid
 
 @hybrid
 def compute(*args, factor=2, name='default', **kwargs):
