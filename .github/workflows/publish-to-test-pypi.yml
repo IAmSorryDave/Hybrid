@@ -53,7 +53,7 @@ jobs:
                 runs-on: ubuntu-latest
                 environment:
                       name: testpypi
-                      url: https://test.pypi.org/p/hybrid
+                      url: https://test.pypi.org/p/hybridz
         
                 permissions:
                         id-token: write
