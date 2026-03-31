@@ -43,7 +43,7 @@ jobs:
                   name: python-package-distributions
                   path: dist/
                         
-        publish-to-testpypi:
+        publish-to-pypi:
                 name: Publish Python 🐍 distribution 📦
                 needs:
                 - build
@@ -64,6 +64,5 @@ jobs:
                       - name: Publish distribution 📦 to TestPyPI
                         uses: pypa/gh-action-pypi-publish@release/v1
                         with:
-                          repository-url: https://pypi.org/legacy/
                           skip-existing: true
                           verbose: true
