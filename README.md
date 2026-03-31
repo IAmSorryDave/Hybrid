@@ -8,8 +8,7 @@ The `@hybrid` decorator transforms a single function into a chameleonic entity t
 - ✅ Standalone functions
 - ✅ Instance methods 
 - ✅ Class methods 
-- ✅ Static methods 
-- ✅ Bare methods
+- ✅ Static methods
 
 All while **automatically injecting class/instance attributes** as keyword arguments when parameters match.
 
