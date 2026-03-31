@@ -1,6 +1,6 @@
 # Chameleon 🦎
 
-Introduces Python decorator that enables **polymorphic function behavior** — write a function once, use it everywhere. ✨
+Introduces a Python decorator that enables **polymorphic function behavior** — write a function once, use it everywhere. ✨
 
 ## What It Does
 
