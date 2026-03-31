@@ -50,7 +50,7 @@ jobs:
                 runs-on: ubuntu-latest
                 environment:
                       name: pypi
-                      url: https://pypi.org/p/hybrid
+                      url: https://pypi.org/p/chameleon
         
                 permissions:
                         id-token: write
