@@ -1,4 +1,4 @@
-from hybrid import my_function, MyClass, MySubClass, MyDataClass
+from hybridz import my_function, MyClass, MySubClass, MyDataClass
 
 
 def test_my_function():

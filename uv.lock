@@ -12,7 +12,7 @@ wheels = [
 ]
 
 [[package]]
-name = "hybrid"
+name = "hybridz"
 version = "0.3.0"
 source = { editable = "." }
 

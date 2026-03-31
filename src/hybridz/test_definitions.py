@@ -1,4 +1,4 @@
-from hybrid import hybrid
+from hybridz import hybrid
 from dataclasses import dataclass
 
 
